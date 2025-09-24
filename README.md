@@ -14,22 +14,36 @@ Streamlit app for interactive Q&A.
 
 Extensible design for HR, enterprise, or domain-specific assistants.
 
-📂 Project Structure
+## 📂 Project Structure
 insightforge/
+
 ├── src/
-│   ├── knowledge_base.py   # Vector store creation & loading
-│   ├── rag_chain.py        # RAG pipeline (retrieval + LLM)
-│   ├── evaluation.py       # Evaluation of QA predictions
-│   ├── streamlit_app.py    # Frontend (Streamlit UI)
-│   └── ...
-├── data/                   # Source documents
-├── .env                    # API keys (not committed)
-├── requirements.txt        # Python dependencies
-└── README.md               # Project documentation
+
+│ ├── data_prep.py
+
+│ ├── knowledge_base.py # Vector store creation & loading
+
+│ ├── rag_chain.py # RAG pipeline (retrieval + LLM)
+
+│ ├── evaluation.py # Evaluation of QA predictions
+
+│ ├── streamlit_app.py # Frontend (Streamlit UI)
+
+│ └── init.py
+
+├── data/ # Source documents
+
+│ ├── sales_data.csv
+
+├── .env # API keys (not committed)
+
+├── requirements.txt # Python dependencies
+
+└── README.md # Project documentation
 
 ⚙️ Setup
 1. Clone Repository
-git clone https://github.com/yourusername/insightforge.git
+git clone https://github.com/durgeshsingh-personal-projects/insightforge
 cd insightforge
 
 2. Create Virtual Environment
@@ -43,7 +57,7 @@ pip install -r requirements.txt
 
 Create a .env file:
 
-OPENAI_API_KEY=your_openai_api_key_here
+OPENAI_API_KEY=key
 
 🧩 Usage
 1. Build Knowledge Base
@@ -64,7 +78,7 @@ Ask domain-specific questions and get context-aware answers.
 
 📊 Evaluation
 
-We use LangChain’s QA EvalChain + manual checks.
+The use LangChain’s QA EvalChain + manual checks.
 
 Run:
 
